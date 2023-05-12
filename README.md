@@ -2,7 +2,7 @@
   <h1 align="center">Flask Inventory System</h1>
 
   <p align="center">
-    A Flask web app to help with the troubles of inventory.
+    Python Flask app to manage assets. Log assets, print barcodes for them, and effectively manage them.
     <br>
     · Discord: lvke#1655 ·
   </p>
