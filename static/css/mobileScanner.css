@@ -1,0 +1,13 @@
+body {
+    overflow: hidden;
+}
+#divMain {
+    top: 56px;
+    height: calc(100% - 56px);
+    max-height: calc(100% - 56px);
+    width: 100%;
+    overflow: hidden;
+}
+video {
+    width: 100%;
+}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--{% block title %} Scanner {% endblock %}-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div id="divMain">
+    <div id="divEntry" >
+        <div id="divHistory">
+            <div class="wrap-collabsible">
+                <input id="collapsible" class="toggle" type="checkbox">
+                <label for="collapsible" class="lbl-toggle">COMMIT HISTORY</label>
+                <div class="collapsible-content">
+                    <div class="content-inner" id="divTagBox">
+                         <!-- TAG DIVS HERE -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="divOptions">
+            <div class="wrap-collabsible">
+                <input id="optionsCollapsible" class="toggle" type="checkbox">
+                <label for="optionsCollapsible" class="lbl-toggle">OPTIONS</label>
+                <div class="collapsible-content">
+                    <div class="content-inner" id="divOptionsBox">
+                        <div id="divDFUI">
+                            <div id="divInstallDateBox">
+                                <div class="divOptionItem">
+                                    <input type="checkbox" id="cbInstallDate" class="cbOption">
+                                    <label id="lblInstallDate">Installation Date:</label>
+                                    <input type="date" id="calInstallDate" name="calendar">
+                                </div>
+                                <div class="divOptionItem">
+                                    <input type="checkbox" id="cbModel" class="cbOption">
+                                    <label id="lblModel">Model:</label>
+                                    <input type="text" id="txtModel" class="txtOption">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="divETCUI">
+                            <div class="divSafeModeBox">
+                                <input type="checkbox" id="cbSafeMode" class="cbOption">
+                                <label id="lblSafeMode">Safe Mode</label>
+                            </div>
+                            <div class="divSafeModeBox">
+                                <input type="checkbox" id="cbRedirOnly" class="cbOption">
+                                <label id="lblSafeMode">Scan Only Mode</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="divLogs">
+            <div class="wrap-collabsible">
+                <input id="collapsibleLogs" class="toggle" type="checkbox">
+                <label for="collapsibleLogs" class="lbl-toggle">LOGS</label>
+                <div class="collapsible-content">
+                    <div class="content-inner" id="divLogBox">
+                        <textarea id="taLog" spellcheck="false" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="divText">
+            <h1 id="hBigText">OFF</h1>
+            <h2 id="hSmallText">space to toggle</h2>
+        </div>
+        
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}
