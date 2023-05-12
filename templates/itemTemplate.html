@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--{% block title %} Viewing: '{{ tag }}' {% endblock %}-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/itemTemplate.css') }}">
+<div id="divMain">
+    <div class="form-container">
+        <div id="contTag">
+            <img id="barcode" class="shadow rounded" src="https://via.placeholder.com/250x150">
+            <div id="tagInfo">
+                <h1 class="position-absolute" id="lblTag">{{ tag }}</h1>
+                <h1 class="position-absolute" id="lad">last modified: <span id="spanlad">{{ lad }}</span><br>date installed: <input type="text" id="txtDinst"></h1>
+            </div>
+        </div>
+        <div >
+            <div class="ld_container">
+                <div class="ld">
+                    <h3>School</h3>
+                    <h5>{{ school }}</h5>
+                </div>
+
+                <div class="ld">
+                    <h3>Location</h3>
+                    <h5>{{ location }}</h5>
+                </div>
+
+                <div class="ld">
+                    <h3>Item</h3>
+                    <h5>{{ item }}</h5>
+                </div>
+                <div class="ld">
+                    <h3>Model</h3>
+                    <h5 id="lblModel">{{ model }}</h5>
+                </div>
+            </div>
+        </div>
+        <div style="margin-left:10px;">
+            <h2>Comments</h2>
+        </div>
+        <div id="divComCont" class="d-flex align-items-center position-relative">
+            <textarea id="taCom" aria-valuenow="asdf"></textarea>
+        </div>
+    </div>
+</div>
+<script>
+const comments = '{{ comments }}';
+const tag = '{{ tag }}';  
+
+var textBox = document.getElementById("txtDinst");
+textBox.value = "{{ dinst }}";
+textBox.addEventListener('input', resizeInput); // bind the "resizeInput" callback on "input" event
+resizeInput.call(textBox); // immediately call the function
+function resizeInput() {
+    let offwidth = this.value.length + .3 ;
+    this.style.width = offwidth + "ch";
+}
+
+</script>
+<script src="{{ url_for('static', filename='js/purify.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/itemTemplate.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,67 @@
+<style>
+    .cont {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        left: 40px;
+        width: auto;
+    }
+    .rTab {
+        font-family: Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        table-layout: fixed; /* Added property */
+    }
+
+    .rTab thead {
+    background-color: #f8f8f8;
+    text-align: left;
+    font-weight: bold;
+    }
+
+    .rTab th, .rTab td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    }
+
+    .rTab tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+    }
+
+    .rTab tbody tr:hover {
+    background-color: #eaeaea;
+    }
+
+    .rTab td {
+        font-size: 14px;
+        line-height: 1.5;
+        max-height: 30px; /* Adjust to desired height */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .rTab a {
+    color: #0077c0;
+    text-decoration: none;
+    }
+
+</style>
+
+<body>
+    <div class="cont">
+        <table class="rTab">
+            <thead>
+                <tr>
+                    <td>Tag</td>
+                    <td>School</td>
+                    <td>Location</td>
+                    <td>Room</td>
+                    <td>Item</td>
+                    <td>Model</td>
+                </tr>
+            </thead>
+            <tbody>
+                
