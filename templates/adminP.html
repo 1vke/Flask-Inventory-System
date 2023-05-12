@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--{% block title %} Admin {% endblock %}-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/adminP.css') }}">
+    <div id="divMain">
+        <div id="tableCont" class="form-container">
+            <div style="top: 50%; transform: translate(0,-50%); margin-left: 30px; margin-right: 30px;" class="dataB">
+                <table id="dataBT" style="" class="table">
+                    <thead id="header-row">
+                        <tr>
+                            {% for header in headers %}
+                                <th class="thHead">{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody id="tblBody">
+                    {% for row in rows %}
+                        <tr onclick="selectRow(this)">
+                        {% for cell in row %}
+                            <td class="cl"><input class="txt" type="text" style="width: 100%; box-sizing: border-box; border: none;" id="{{ cell }}" value="{{ cell }}" disabled></td>
+                        {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <button id="btnDelUsr" class="inpf" onclick="delUsr()">Delete User</button>
+            </div>
+            <div style="border-radius: 0px; width: 400px;background-color: transparent; border: none;top: 50%; transform: translate(0,-50%);" class="dataB">
+                <div id="user-controls">
+                    <div class="ucOption">
+                        <label for="username-input">Username:</label>
+                        <input type="text" class="inpf" id="username-input" name="username" required>
+                    </div>
+                    <div class="ucOption">
+                        <label for="password-input">Password:</label>
+                        <input type="text" class="inpf" id="password-input" name="password" required>
+                    </div> 
+                    <button id="btnAddUsr" class="inpf" onclick="addUsr()">Add User</button>
+                    <div style="filter: blur(5px)"> <!-- TODO: Remove this blur and actually implement function -->
+                        <div class="ucOption">
+                            <label style="margin-bottom: 0px;" for="backup-location-input">Database Backup Location:</label>
+                        </div>
+                        <div class="ucOption"><input type="text" class="inpf" id="txtBackLoc"></div>
+                        <div class="ucOption">
+                            <label for="buTime">Backup Frequency:</label>
+                            <select id="buTime" class="inpf"><option value="NaN">3hr</option></select>
+                        </div> 
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/purify.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/adminP.js') }}"></script>
+{% endblock %}

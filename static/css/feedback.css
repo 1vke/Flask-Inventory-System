@@ -1,0 +1,57 @@
+body {
+    background-color: #323238;
+    color: snow;
+}
+
+        /*=============*/
+        /* ELEMENT CSS */
+        /*=============*/
+
+.form-container {
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 5px;
+    top: 50%;
+    position: fixed;
+    color: rgb(219, 219, 219);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    overflow: auto;
+    /* overflow-y: scroll; */
+}
+#cont {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px 20px 5px 20px;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+}
+.inpf {
+    border-radius: 5px;
+    border: none;
+    background-color: #333333;
+    color: snow;
+}
+#input-text {
+    resize: none;
+}
+#submit-button {
+    background-color: #585858;
+    margin-top: 15px;
+    position: relative;
+    left: 50%;
+    font-size: 20px;
+    height: 35px;
+    transform: translate(-50%);
+    width: 60%
+}
+.hf {
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+.hf:not(:first-child){
+    margin-top: 10px;
+}

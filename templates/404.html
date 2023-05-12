@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %} PAGE NOT FOUND {% endblock %}
+{% block content %}
+
+    <style> 
+    html, body {
+        height: 100%;
+    }
+    .cont {
+        top: 56px;
+        height: calc(100% - 56px);
+        min-height: calc(100% - 56px);
+        width: 100%;
+        background-color: #3c3c3c;
+    }
+    #divText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        height: calc(100% - 56px);
+        min-height: calc(100% - 56px);
+        background-color: #3c3c3c;
+        color: snow;
+    }
+    #hBigText {
+        font-size: 200px;
+    }
+    </style>
+    <div class="cont">
+        <div id="divText">
+            <h1 id="hBigText">404</h1>
+            <h2 id="hSmallText"> PAGE NOT FOUND </h2>
+        </div>
+    </div>
+    <script>
+    setAlertTop();
+    showAlert("danger",2000,"{{ errMsg }}");
+    
+    
+    </script>
+{% endblock %}
