@@ -3,7 +3,7 @@
 
   <p align="center">
     Python Flask app to manage assets. Log assets, print barcodes for them, and effectively manage them.
-    <br>
+    <br>Written in Python, Javascript, HTML and CSS<br>
     · Discord: lvke#1655 ·
   </p>
 </p>
