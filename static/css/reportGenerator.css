@@ -1,0 +1,343 @@
+    /*=============*/
+    /* ELEMENT CSS */
+    /*=============*/
+
+    #divMain {
+        display: grid;
+        grid-template-columns: 500px 1fr;
+        top: 56px; 
+        bottom: 0px;
+        height: auto;
+        width: 100%;
+    }
+    #divUiBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 56px; 
+        left: 0;
+        bottom:0; 
+        width: 500px; 
+        max-width: 500px;
+        height: auto; 
+        background-color: #323238;
+    }
+    #school {
+        width: 100%;
+        background-color: #e9e9e9;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+    .divUi {
+        margin: 10px 20px 10px 20px;
+        padding:20px;
+        background-color: #e8e8e8;
+        width: 450px;
+        border-radius: 15px;
+    }
+    .UiOptions {
+        font-size: 15px;
+        margin-top: 30px;
+        height: auto;
+    }
+    .UiOptions input[type="checkbox"] {
+        
+    }
+    .UiOptions label {
+        margin-bottom: 0;
+    }
+    .UiParams {
+        height: calc(100% - 185px);
+        overflow: auto;
+        overflow-y: scroll;
+        overflow-x: scroll;
+    }
+    .tree {
+        position: relative;
+        font-family: "Roboto Mono", monospace;
+        font-size: 0.85rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+      }
+      .tree span {
+        font-size: 13px;
+        font-style: italic;
+        letter-spacing: 0.4px;
+        color: #a8a8a8;
+      }
+      .tree .fa-folder-open, .tree .fa-folder {
+        color: #007bff;
+      }
+      .tree .fa-html5 {
+        color: #f21f10;
+      }
+      .tree ul {
+        padding-left: 5px;
+        list-style: none;
+      }
+      .tree ul li {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 15px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .tree ul li:before {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 10px;
+        height: 1px;
+        margin: auto;
+        content: "";
+        background-color: #666;
+      }
+      .tree ul li:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        content: "";
+        background-color: #666;
+      }
+      .tree ul li:last-child:after {
+        height: 0px;
+      }
+      .tree ul a {
+        cursor: pointer;
+      }
+      .tree ul a:hover {
+        text-decoration: none;
+      }      
+    .tree li ul {
+        display: none;
+    }
+    
+    .tree li.open > ul {
+        display: block;
+    }
+
+    #params {
+        max-height: 93%;
+        overflow-y: scroll;
+        bottom: 10px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #888 #fff;
+    }
+    .param {
+        position: relative;
+        background-color: #f0f0f0;
+        border-radius: 15px;
+        padding:10px;
+        margin-top: 10px;
+        width:100%;
+    }
+    .location {
+        margin-left:10px;
+        width: 40%;
+        background-color: #e9e9e9;
+    }
+    .add-row-button {
+        width: 35%;
+        height: 40px;
+        border: none;
+        border-radius: 4px;
+        margin-left:20px;
+        background-color: #e9e9e9;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .scrollable-div {
+        height: 220px;
+        margin-top: 10px;
+        padding: 5px;
+        background-color: #e9e9e9;
+        border-radius: 15px;
+        overflow-y: scroll;
+    }
+
+    .input-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto;
+        border-spacing: 0;
+    }
+    .input-table td {
+        padding: 5px;
+        text-align: center;
+        border-bottom: 2px dashed rgb(215, 215, 215);
+    }
+    td {
+        padding: 5px;
+        text-align: center;
+    }
+
+    
+    .item-dropdown {
+        font-size: 15px;
+        width: 125px;
+        height: 17px;
+        background-color: #cfcfcf;
+        margin-bottom: 2px;
+        padding: 0;
+        position: absolute;
+    }
+    .item-dropdown.op {
+        transform: translate(135px, 2px);
+    }
+    .item-dropdown.n {
+        transform: translate(4px, 2px);
+    }
+    .item-text {
+        font-size: 15px;
+        width: 125px;
+        height: 17px;
+        background-color: #cfcfcf;
+        margin-bottom: 2px;
+        padding: 0!important;
+        position: absolute;
+        transform: translate(135px, 2px);
+        display: none;
+    }
+    .btnAddFilter {
+        position: absolute;
+        background-color: #4c4c4c;
+        transform: translate(-23px, -6px);
+        height: 18px;
+        width: 18px;
+        border-radius: 5px;
+        z-index: 10;
+    }
+    .btnDelFilter {
+        position: absolute;
+        background-color: #d4d4d4;
+        border: #bdbdbd;
+        transform: translate(-21px, 4px);
+        height: 13px;
+        width: 13px;
+        border-radius: 5px;
+        z-index: 10;
+    }
+    .btnDelText {
+        position: absolute;
+        transform: translate(-4px, -13px);
+        color: #2b2b2b!important;
+        font-style: normal!important;
+        font-weight: bolder;
+        font-size: 16px!important;
+    }
+    .btnText {
+        position: absolute;
+        transform: translate(-4px, -13px);
+        color: #dfdfdf!important;
+        font-style: normal!important;
+        font-weight: bolder;
+        font-size: 16px!important;
+    }
+    .model {
+        width: 80%;
+        background-color: #e9e9e9;
+    }
+    .cal {
+        background-color: #e9e9e9;
+        margin-top:3px;
+        margin-bottom:7px;
+        border: none;
+    }
+    .quantity-input {
+        width: 80%;
+        background-color: #e9e9e9;
+        padding: 8px;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+    .delete-row-button {
+        background-color: transparent;
+        color: rgb(143, 143, 143);
+        font-weight: bold;
+        font-size: 14px;
+        width: 30px;
+        border: none;
+        padding: 0px;
+        cursor: pointer;
+    }
+    .delete-param-button {
+        position: absolute;
+        top:11px;
+        right: 8px;
+    }
+    #divUIButtons {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .UiBoxBtns {
+        float: left;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 20px;
+        width: 48%;
+        height: 45px;
+        border-radius: 5px;
+        color: white;
+        border: none;
+    }
+    #btnGen {
+        left: 20px;
+        background-color: #505050;
+        padding: 0 0 2px 0; 
+        font-size: 20px;
+    }
+    #btnAdd {
+        background-color: #6f8dd1;
+        font-size: 30px;
+        padding: 0 0 10px 0; 
+        line-height: 40px; 
+    }
+
+    #divContent {
+        max-height:94.8%;
+        position: absolute; 
+        top: 56px;  
+        right: 0; 
+        bottom:0; 
+        height: auto; 
+        width: calc(100% - 500px); 
+        background-color: #505050; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex-direction: column;
+    }
+    #pdfViewer {
+        width: 100%;
+        height: 100%; 
+        border: none;
+    }
+
+    /*=============*/
+    /* GENERAL CSS */
+    /*=============*/
+
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    select {
+        padding: 8px;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+    }

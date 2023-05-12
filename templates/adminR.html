@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <script>
+        function adlog(){
+            var keyElm = document.getElementById("key");
+            fetch("/admin", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ key: keyElm.value })
+            })
+            .then(response => response.text())
+            .then(text => {
+                var dat = text.split("^");
+                if (dat[0] == "redir"){
+                    window.location.href = dat[1];
+                }
+                showAlert(dat[0], dat[1], dat[2]);
+            });
+        }
+    </script>
+    <div class="container" style=" margin-top: 20vh;">
+        
+            <h1>{% block title %} Admin Login {% endblock %}</h1>
+            {% if error %}
+                <div class="error-message">{{ error }}</div>
+            {% endif %}
+            <input type="password" id="key" name="key" required>
+            <input type="submit" value="Login" onclick="adlog()">
+        
+    </div>
+
+    <style>
+        
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            width: 400px;
+            margin: auto;
+        }
+        input[type=text], input[type=password] {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type=submit]:hover {
+            background-color: #3e8e41;
+        }
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    
+{% endblock %}

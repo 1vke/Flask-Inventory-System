@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!--{% block title %} Report Generator {% endblock %}-->
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reportGenerator.css') }}">
+
+
+<div id="divMain">
+    <div id="divUiBox">
+        <div class="divUi UiOptions">
+            <div class="optionItem">
+                <input type="checkbox" for="lblAutoLog" id="cbAutoLog" class="cbOption" checked>
+                <label id="lblAutoLog">Auto Log</label>
+            </div>
+        </div>
+        <div class="divUi UiParams">
+            <div class="tree">
+                <ul id="treeList">
+                    <li> <button class="btnAddFilter" onclick="addFilter(this)"><span class="btnText">+</span></button></li>
+                </ul>
+            </div>
+        </div>
+        <div id="divUIButtons">
+            <button class="UiBoxBtns" id="btnGen" onclick="genReport()">Generate</button>
+        </div>
+    </div>
+    <div id="divContent">
+        <img id="imgLoad" src="{{ url_for('static', filename='img/loading.gif') }}" class="centered" style="height: 300px; width: 400px; display: none;">
+        <iframe id="pdfViewer"></iframe>
+    </div>
+</div>
+<script>
+    const metadataStrs = ["{{ schools }}","{{ items }}","{{ locations }}"];
+    const metadataNames = "{{ colnames }}".split("^");
+    const ip = "{{ ip }}";
+</script>
+<script src="{{ url_for('static', filename='js/reportGenerator.js') }}"></script>
+
+{% endblock %}
