@@ -1,4 +1,4 @@
-<img width="1000" align="center" src="https://github.com/1vke/Scythe-ShopifyMonitorGUI/blob/master/static/ex1.png">
+<img width="1000" align="center" src="https://github.com/1vke/Flask-Inventory-System/blob/main/gitStatic/screenys.png">
 
 <p align="center">
   <h1 align="center">Flask Inventory System</h1>
