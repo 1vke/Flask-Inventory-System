@@ -23,3 +23,6 @@ This application is designed to help manage inventory by providing a user-friend
 - Barcode Generator: The barcode generator page allows you to create barcode stickers for your assets. You can specify the necessary instructions and generate a PDF with barcodes that can be printed onto sticker sheets and applied to your assets for easy scanning in the future.
 
 In addition to the three main pages, the application also features a "Report" page, located inside of the "Asset Viewer" page (report button). This page allows users to filter through their inventory and generate a detailed PDF report of their assets. 
+
+# Stack
+This application has been tested and works on a Python 3.10 stack with WSGI, Gunicorn, and Nginx on an Ubuntu server.
