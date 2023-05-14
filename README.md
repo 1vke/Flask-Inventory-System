@@ -4,8 +4,8 @@
   <h1 align="center">Flask Inventory System</h1>
 
   <p align="center">
-    Python Flask app to manage assets. Log assets, print barcodes for them, and effectively manage them.
-    <br>Written in Python, Javascript, HTML and CSS<br>
+    Python Flask app to manage assets. Log assets, print barcodes for them, and effectively manage them.<br>
+    Written in Python, Javascript, HTML and CSS<br>
     · Discord: lvke#1655 ·
   </p>
 </p>
@@ -27,3 +27,9 @@ In addition to the three main pages, the application also features a "Report" pa
 
 # Stack
 This application has been tested and works on a Python 3.10 stack with WSGI, Gunicorn, and Nginx on an Ubuntu server.
+
+# Installation
+To get this application up and running, it is recommended you follow this DigitalOcean article:<br>
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-22-04<br><br>
+
+The only things that you will have to not follow or change from the article is that the "myproject.py" is already in this project (named app.py) and in the "wsgi.py" the import statement should be from app import app.
