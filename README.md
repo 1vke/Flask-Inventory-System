@@ -12,6 +12,7 @@
 
 # NOTICE!
 This web application is in BETA!
+README is under construction!
 
 # Overview
 This application is designed to help manage inventory by providing a user-friendly interface to scan and manage assets. It consists of three main pages:
