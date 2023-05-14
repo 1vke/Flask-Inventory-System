@@ -11,7 +11,7 @@
 </p>
 
 # NOTICE!
-This web application is in BETA!<br>
+This web application is in BETA! Some features might be absent or buggy<br>
 README is under construction!
 
 # Overview
