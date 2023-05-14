@@ -31,5 +31,5 @@ This application has been tested and works on a Python 3.10 stack with WSGI, Gun
 # Installation
 To get this application up and running, it is recommended you follow this DigitalOcean article:<br>
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-22-04<br><br>
-
+You should clone the github into the website folder that contains the python virtual environment as well as the "wsgi.py"<br>
 The only things that you will have to not follow or change from the article is that the "myproject.py" is already in this project (named app.py) and in the "wsgi.py" the import statement should be from app import app.
